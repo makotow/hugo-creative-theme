@@ -21,6 +21,13 @@
                         <a class="page-scroll" href="#about">{{ .Site.Params.navigation.links.about }}</a>
                     </li>
                 {{ end }}
+
+                {{ if and .Site.Params.technicalresources .Site.Params.navigation.links.technicalresources }}
+                    <li>
+                        <a class="page-scroll" href="#technicalresources">{{ .Site.Params.navigation.links.technicalresources }}</a>
+                    </li>
+                {{ end }}
+
                 {{ if and .Site.Params.services.list .Site.Params.navigation.links.services }}
                     <li>
                         <a class="page-scroll" href="#services">{{ .Site.Params.navigation.links.services }}</a>

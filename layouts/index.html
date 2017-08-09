@@ -5,15 +5,19 @@
     </head>
     <body id="page-top">
         {{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.services .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact }}
-            {{ partial "nav.html" . }}
+        {{ partial "nav.html" . }}
         {{ end }}
 
         {{ if .Site.Params.hero }}
-            {{ partial "hero.html" . }}
+        {{ partial "hero.html" . }}
         {{ end }}
 
         {{ if .Site.Params.about }}
-            {{ partial "about.html" . }}
+        {{ partial "about.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.technicalresources.list }}
+        {{ partial "technicalresources.html" . }}
         {{ end }}
 
         {{ if .Site.Params.services.list }}
